@@ -3,4 +3,4 @@ layout: page
 title: About
 ---
 
-This is your About page. Celebrate yourself and show the world who you are!
+23 year old aerospace enthusiast from Nepal, with a knack for movies and photography. Also loves trains. [Website](https://bibekyonzan.com.np)
