@@ -1,0 +1,9 @@
+*.gem
+.bundle
+.jekyll-cache
+.sass-cache
+_site
+.obsidian/
+2019-06-20-second-page.md
+2020-05-25-what-is-jekyll-latex.md
+2025-08-01-hello-world.md
