@@ -1,8 +1,8 @@
 # Site Info
 title: 'Projects | Bibek Yonzan'
 description: 'a website for past projects'
-google_verify: abc123 # Put your Google Verification here
-google_analytics: UA-123
+google_verify: # Put your Google Verification here
+google_analytics:
 
 # Author Info
 author_name: 'Bibek Yonzan' # Your name here
@@ -11,7 +11,7 @@ author_email: bibek.yonzan@gmail.com # Your email here
 author_gravatar: e87df5480f499a81efb838aa9505d726
 
 # Site Settings
-url: https://ryanmcdermott.me/jekyll-latex # Change to your site
+url: https://projects.bibekyonzan.com.np # Change to your site
 baseurl:
 permalink: /posts/:title # Post permalink
 timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
