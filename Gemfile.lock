@@ -261,7 +261,6 @@ PLATFORMS
 DEPENDENCIES
   bourbon
   github-pages
-  jekyll (~> 3.9.0)
   jekyll-paginate
   webrick
 
