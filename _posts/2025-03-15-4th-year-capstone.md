@@ -67,7 +67,7 @@ The indoor environment had three different configurations: no obstacles (i.e., b
 
 From the test flights, a 3D point cloud map was also obtained. Following is a point cloud map for the 2 obstacles configuration.
 
-{% include video.liquid url="/assets/videos/2_obs.mp4" description="3D Point Cloud Map: 2 obstacle configuration" %}
+{% include video.liquid url="https://i.imgur.com/W0bd120.mp4" description="3D Point Cloud Map: 2 obstacle configuration" %}
 
 Next, two different "real" world environments were selected to mimic operations in the real world. A garden before the CES building in our campus, the senior year classroom, and the manufacturing laboratory.
 
