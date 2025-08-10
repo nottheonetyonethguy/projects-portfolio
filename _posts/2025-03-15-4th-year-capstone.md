@@ -15,13 +15,13 @@ layout: post
   </tr>
 </table>
 
-{% include image.liquid url="/assets/images/quad.png" description="Final Quadcopter" %}
+{% include image.liquid url="/assets/images/quad.png" %}
 
 The goal was to implement a visual SLAM algorithm, in a drone, that enabled autonomous flight in an indoor environment with degraded GPS signals. Indoor autonomous navigation provides unique challenges: GPS denied environments, dynamic obstacles, and a need for real time mapping and localization. Our solution was to use a RGB-D camera with a Pixhawk 4 as the flight controller and a Raspberry Pi 4 as the flight computer to perform localization and mapping the environment, for obstacle free autonomous navigation.
 
 We developed a  comprehensive  autonomous system with RTAB-Map integrated with a PX4-Raspberry Pi flight stack, achieving reliable indoor navigation with 7.7 cm accuracy.
 
- {% include image.liquid url="/assets/images/setup.png" description="Final Quadcopter" %}
+ {% include image.liquid url="/assets/images/setup.png" description="Working Setup" %}
 
 | **Technical Implementation** |
 
@@ -96,5 +96,31 @@ The results and the subsequent plots and point cloud maps are:
 
 {% include image.liquid url="/assets/images/real-world.png" description="Altitude Deviation Plots: Garden (left), Senior classroom (middle) and Manufacturing Lab (right)" %}
 
-{% include video.liquid url="/assets/videos/manufacturing.mp4" description="3D Point Cloud Map: Manufacturing Lab" %}
+{% include video.liquid url="https://i.imgur.com/SznT68X.mp4" description="3D Point Cloud Map: Manufacturing Lab" %}
 
+| **Further Work and Issues** |
+
+1. The processing power could be improved. Instead of a Raspberry Pi, a Jetson Nano or an Intel NUC could be used. The processing power was one of the major bottlenecks in this project, and a GPU powered, or a simply more powerful CPU could boost this project tremendously.
+2. Another major issue faced was during sensor fusion. Partially due to the processing limitations of the onboard computer as well as the mismatch between the polling rates of the image sensor and the IMU. A camera with an IMU unit could be used to replace the main sensing unit, thus reducing the dependance on external sensor fusion. 
+3. Due to economical limitations, ground truth could not be measured. As such proper quantitative analysis could not be done. Installing motion capture capture cameras could help gather ground truth data, thus making the results and analysis further meaningful.
+
+| **Flight Test Videos** |
+
+This is one of the first test flights, here we are trying to test out offboard controls on the drone for the first time. 
+
+{% include embed.liquid url="https://www.youtube.com/embed/ISGFztw0mzk?&amp;mute=1" description="Initial Test Flight" %}
+
+This is one of the tests at the indoor environment at IIEC.
+
+{% include embed.liquid url="https://www.youtube.com/embed/cv64lAjkGY8?&amp;mute=1" description="Test Flight: Zero Obstacles at IIEC" %}
+
+This is the one of the final test flights, this one is from the senior classroom environment. The whole final test flights can be found [here](https://youtube.com/playlist?list=PLkHhU0xN0fkKgWfZG8JTeAtxZkMeFaX9Y&feature=shared). 
+
+{% include embed.liquid url="https://www.youtube.com/embed/IfEmNWopbNU?list=PLkHhU0xN0fkKgWfZG8JTeAtxZkMeFaX9Y&amp;mute=1" description="Final Test Flight: Senior Classroom" %}
+
+### References
+
+1. [https://github.com/77bas-SLAMdrone/indoor-slam-drone](https://github.com/77bas-SLAMdrone/indoor-slam-drone)
+2. [https://github.com/matlabbe/rtabmap_drone_example](https://github.com/matlabbe/rtabmap_drone_example)
+3. [RTAB-Map as an Open-Source Lidar and Visual SLAM Library for Large-Scale and Long-Term Online Operation](https://arxiv.org/abs/2403.06341)
+4. [Project Report](https://www.dropbox.com/scl/fi/we7jity7zmpx6d9xaidcv/077BAS_Group2_SLAM_Drone.pdf?rlkey=ax4inm95uitoaz93x0q0ss7nv&st=nv07c6ek&dl=0)
